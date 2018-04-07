@@ -9,6 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UISlider *redSlider;
+@property (weak, nonatomic) IBOutlet UISlider *greenSlider;
+@property (weak, nonatomic) IBOutlet UISlider *blueSlider;
+@property (weak, nonatomic) IBOutlet UITextField *redInput;
+@property (weak, nonatomic) IBOutlet UITextField *blueInput;
+@property (weak, nonatomic) IBOutlet UITextField *greenInput;
+
+@property (weak, nonatomic) IBOutlet UIView *showView;
 
 
 @end

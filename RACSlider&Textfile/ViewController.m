@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import <ReactiveCocoa.h>
 
 @interface ViewController ()
 
@@ -14,15 +15,45 @@
 
 @implementation ViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    _redInput.text = _greenInput.text = _blueInput.text = @"0.5";
+    [self blindSlider:_redSlider textField:_redInput];
+    [self blindSlider:_blueSlider textField:_blueInput];
+    [self blindSlider:_greenSlider textField:_greenInput];
+
 }
+
+
+- (void)blindSlider:(UISlider *)slider textField:(UITextField *)textField
+{
+    RACChannelTerminal *signalSlider = [slider rac_newValueChannelWithNilValue:nil];
+    RACChannelTerminal *signalText = [textField rac_newTextChannel];
+    [signalText subscribe:signalSlider];
+    [[signalSlider map:^id(id value) {
+        return [NSString stringWithFormat:@"%.02f",[value floatValue]];
+    }] subscribe:signalText];
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
 }
 
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BCC127660AB355151A84E3E2 /* libPods-RACSlider&Textfile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 89B1E5DC5EC3B4AB73147004 /* libPods-RACSlider&Textfile.a */; };
 		F57F84B82078A26E00DAFDA5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F57F84B72078A26E00DAFDA5 /* AppDelegate.m */; };
 		F57F84BB2078A26E00DAFDA5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F57F84BA2078A26E00DAFDA5 /* ViewController.m */; };
 		F57F84BE2078A26E00DAFDA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F57F84BC2078A26E00DAFDA5 /* Main.storyboard */; };
@@ -35,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		89B1E5DC5EC3B4AB73147004 /* libPods-RACSlider&Textfile.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RACSlider&Textfile.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A646927F41D76A6048127836 /* Pods-RACSlider&Textfile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACSlider&Textfile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RACSlider&Textfile/Pods-RACSlider&Textfile.debug.xcconfig"; sourceTree = "<group>"; };
+		D13DA441DA52B1C03CB96D69 /* Pods-RACSlider&Textfile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACSlider&Textfile.release.xcconfig"; path = "Pods/Target Support Files/Pods-RACSlider&Textfile/Pods-RACSlider&Textfile.release.xcconfig"; sourceTree = "<group>"; };
 		F57F84B32078A26E00DAFDA5 /* RACSlider&Textfile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RACSlider&Textfile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F57F84B62078A26E00DAFDA5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F57F84B72078A26E00DAFDA5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCC127660AB355151A84E3E2 /* libPods-RACSlider&Textfile.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34CD8E93AA7601B4665A54D6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				89B1E5DC5EC3B4AB73147004 /* libPods-RACSlider&Textfile.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9AEB62A61133D3B3C3D5B45F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A646927F41D76A6048127836 /* Pods-RACSlider&Textfile.debug.xcconfig */,
+				D13DA441DA52B1C03CB96D69 /* Pods-RACSlider&Textfile.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F57F84AA2078A26E00DAFDA5 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +107,8 @@
 				F57F84CE2078A26E00DAFDA5 /* RACSlider&TextfileTests */,
 				F57F84D92078A26E00DAFDA5 /* RACSlider&TextfileUITests */,
 				F57F84B42078A26E00DAFDA5 /* Products */,
+				9AEB62A61133D3B3C3D5B45F /* Pods */,
+				34CD8E93AA7601B4665A54D6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -139,6 +163,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F57F84DF2078A26E00DAFDA5 /* Build configuration list for PBXNativeTarget "RACSlider&Textfile" */;
 			buildPhases = (
+				246021A31265102EF542682A /* [CP] Check Pods Manifest.lock */,
 				F57F84AF2078A26E00DAFDA5 /* Sources */,
 				F57F84B02078A26E00DAFDA5 /* Frameworks */,
 				F57F84B12078A26E00DAFDA5 /* Resources */,
@@ -259,6 +284,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		246021A31265102EF542682A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RACSlider&Textfile-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F57F84AF2078A26E00DAFDA5 /* Sources */ = {
@@ -428,6 +474,7 @@
 		};
 		F57F84E02078A26E00DAFDA5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A646927F41D76A6048127836 /* Pods-RACSlider&Textfile.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -441,6 +488,7 @@
 		};
 		F57F84E12078A26E00DAFDA5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D13DA441DA52B1C03CB96D69 /* Pods-RACSlider&Textfile.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
